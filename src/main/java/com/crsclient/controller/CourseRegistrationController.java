@@ -114,7 +114,7 @@ public class CourseRegistrationController {
     public String showStudent(@PathVariable("id") Integer id, Model model) {
         CourseRegistration coursereg = courseregistrationService.findID(id);
         if (coursereg == null) {
-            model.addAttribute("msg", "Course Registration for the Student not found");
+            model.addAttribute("msg", "Course Registration is not found for this Student!");
         }
         model.addAttribute("coursereg", coursereg);
 	return "profile";
